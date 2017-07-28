@@ -1,0 +1,39 @@
+#查看springboot开启了哪些配置
+debug: false
+
+#server:
+#  port: 8000
+#  address: 192.168.40.245
+#  profiles: development
+
+spring:
+  profiles:
+    active: dev
+
+---
+#开发环境配置
+spring:
+  profiles: dev
+  address: 192.168.40.245
+
+server:
+  port: 8000
+
+
+---
+#测试环境配置
+spring:
+  profiles: test
+
+server:
+  port: 8081
+
+
+---
+#生产环境配置
+
+spring:
+  profiles: pro
+
+server:
+  port: 8082
